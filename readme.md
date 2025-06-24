@@ -45,24 +45,14 @@ python test.py --checkpoint your_saving_checkpoint --datasets Set5,Set14,B100,Ur
 ## Citation🤝
 If you find our work helpful in your research, please consider citing it. Thanks! 🤞
 ```
-@articla{ni2024deformable,
-    author={Ni, Ning and Zhang, Libao},
-    journal={IEEE Transactions on Geoscience and Remote Sensing}, 
-    title={Deformable Convolution Alignment and Dynamic Scale-Aware Network for Continuous-Scale Satellite Video Super-Resolution}, 
-    year={2024},
-    volume={62},
-    number={},
-    pages={1-17},
-    doi={10.1109/TGRS.2024.3366550}
+@InProceedings{Ni_2025_CVPR,
+    author    = {Ni, Ning and Zhang, Libao},
+    title     = {SLVR: Super-Light Visual Reconstruction via Blueprint Controllable Convolutions and Exploring Feature Diversity Representation},
+    booktitle = {Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR)},
+    month     = {June},
+    year      = {2025},
+    pages     = {400-410}
 }
 ```
 
-```
-N. Ni and L. Zhang, "Deformable Convolution Alignment and Dynamic Scale-Aware Network for Continuous-Scale Satellite Video Super-Resolution," in IEEE Transactions on Geoscience and Remote Sensing, vol. 62, pp. 1-17, 2024, Art no. 5610017, doi: 10.1109/TGRS.2024.3366550.
-```
 
-## Acknowledgement🙏
-Our code is built upon [TDAN](https://github.com/YapengTian/TDAN-VSR-CVPR-2020).
-
-## Update◐◓◑◒
-Satellite data is continuously updated……………………………………………………………………………………
