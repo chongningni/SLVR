@@ -22,9 +22,9 @@ git clone https://github.com/chongningni/SLVR.git
 
 
 ## Pretrained checkpoints/models:
-1. Model pretrained on the DIV2K dataset: download from this [url]()
+1. Model pretrained on the DIV2K/DF2K dataset: download from here [download model](https://github.com/chongningni/SLVR/releases/download/pretrain/pretrain_model.zip)
    
-2. Model pretrained on the DF2K dataset: download from this [url]()
+
 
 
 ## Train👇
