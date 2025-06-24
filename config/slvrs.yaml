@@ -1,0 +1,47 @@
+#################################
+##  Configs for the Trainer    ##
+#################################
+trainer:
+  max_epochs: 1000
+  save_top_k: 2
+  check_val_every_n_epoch: 4
+
+#################################
+##  Configs for the DataModule ##
+#################################
+data_module:
+  name: SRDataModule
+  args:
+    num_workers: 4
+    rgb_range: 1
+    scale: 4
+    train:
+      data_path: load/DF2K/train_HR
+      data_length: 128000
+      data_cache: memory
+      data_first_k: 3450
+      lr_img_sz: 64
+      batch_size: 128
+    valid:
+      data_path: load/DIV2K/valid_HR
+      self_ensemble: false
+
+#######################################
+##  Configs for the LightningModule  ##
+#######################################
+lit_model:
+  name: SRModel
+  args:
+    rgb_range: 1
+    valid:
+      no_crop_border: false
+      test_Y: true
+      scale: 4
+    network:
+      name: SLVRS
+      args: 
+        upscale: 4
+    optimizer:
+      lr: 0.001
+      lr_scheduler_milestones: [200, 400, 600, 800]
+      lr_scheduler_gamma: 0.5
