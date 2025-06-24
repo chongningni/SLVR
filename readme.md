@@ -1,4 +1,4 @@
-# SLVR: Super-Light Visual Reconstruction via Blueprint Controllable Convolutions and Exploring Feature Diversity Representation (CVPR 2025)
+# (CVPR 2025) SLVR: Super-Light Visual Reconstruction via Blueprint Controllable Convolutions and Exploring Feature Diversity Representation
 📖[Paper](https://openaccess.thecvf.com/content/CVPR2025/html/Ni_SLVR_Super-Light_Visual_Reconstruction_via_Blueprint_Controllable_Convolutions_and_Exploring_CVPR_2025_paper.html) |🖼️[PDF](https://openaccess.thecvf.com/content/CVPR2025/papers/Ni_SLVR_Super-Light_Visual_Reconstruction_via_Blueprint_Controllable_Convolutions_and_Exploring_CVPR_2025_paper.pdf)
 
 PyTorch codes for 《Super-Light Visual Reconstruction via Blueprint Controllable Convolutions and Exploring Feature Diversity Representation》, Proceedings of the Computer Vision and Pattern Recognition Conference (CVPR), 2025.
