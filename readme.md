@@ -29,7 +29,9 @@ git clone https://github.com/chongningni/SLVR.git
 
 ## Train👇
 ① Download training datset from here: [DIV2K Dataset](https://data.vision.ee.ethz.ch/cvl/DIV2K/)
+
 ② Configure the yaml file according to your file path ( In config/ )
+
 ③ Start training with the following command:
 ```
 python train.py --config config/config_file.yaml
