@@ -42,7 +42,7 @@ python train.py --config config/config_file.yaml
 ```
 python test.py --checkpoint your_saving_checkpoint --datasets Set5,Set14,B100,Urban100,Manga109 --scales 4
 ```
-**Note: The PSNR calculated here may be biased, and the calculation in MATLAB is accurate.**
+**Note: The PSNR calculated in MATLAB is the final results.**
 
 
 ## Citation🤝
