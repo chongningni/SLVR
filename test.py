@@ -9,7 +9,7 @@ from matplotlib import pyplot as plt
 from pytorch_lightning import seed_everything
 from tqdm import tqdm
 from thop import clever_format
-from models import load_model
+from litsr.models import load_model
 
 seed_everything(123)
 

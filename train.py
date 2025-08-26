@@ -7,8 +7,8 @@ from pytorch_lightning import Trainer, loggers, seed_everything
 from pytorch_lightning.callbacks import ModelCheckpoint
 
 from archs import *
-from data import create_data_module
-from models import create_model, load_model
+from litsr.data import create_data_module
+from litsr.models import create_model, load_model
 
 torch.backends.cudnn.benchmark = True
 

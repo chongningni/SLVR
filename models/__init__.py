@@ -3,7 +3,7 @@ import os
 from os import path as osp
 
 import torch
-from litsr import create_model, load_model
+from litsr.models import create_model, load_model
 from litsr.utils.registry import ModelRegistry
 import archs
 
