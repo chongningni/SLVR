@@ -510,7 +510,7 @@ class SLVR(nn.Module):
 @ArchRegistry.register()
 class SLVRM(nn.Module):
     def __init__(self, num_in_ch=3, num_feat=54, num_block=8, num_out_ch=3, upscale=4,
-                 conv='BSConvG', upsampler='pixelshuffledirect', p=0.25):
+                 conv='B2Conv', upsampler='pixelshuffledirect', p=0.25):
         super(SLVRM, self).__init__()
         kwargs = {'padding': 1}
         if conv == 'BSConvS':
@@ -574,7 +574,7 @@ class SLVRM(nn.Module):
 @ArchRegistry.register()
 class SLVRS(nn.Module):
     def __init__(self, num_in_ch=3, num_feat=40, num_block=6, num_out_ch=3, upscale=4,
-                 conv='BSConvG', upsampler='pixelshuffledirect', p=0.25):
+                 conv='B2Conv', upsampler='pixelshuffledirect', p=0.25):
         super(SLVRS, self).__init__()
         kwargs = {'padding': 1}
         if conv == 'BSConvS':
@@ -611,12 +611,12 @@ class SLVRS(nn.Module):
         x_up = F.interpolate(input, scale_factor=4, mode="bicubic", align_corners=False)
         input = torch.cat([input, input, input, input], dim=1)
         out_fea = self.fea_conv(input)
-        out_B1, out_B1_ = self.B1(out_fea)
-        out_B2, out_B2_ = self.B2(out_B1_)
-        out_B3, out_B3_ = self.B3(out_B2_)
-        out_B4, out_B4_ = self.B4(out_B3_)
-        out_B5, out_B5_ = self.B5(out_B4_)
-        out_B6, out_B6_ = self.B6(out_B5_)
+        out_B1_ = self.B1(out_fea)
+        out_B2_ = self.B2(out_B1_)
+        out_B3_ = self.B3(out_B2_)
+        out_B4_ = self.B4(out_B3_)
+        out_B5_ = self.B5(out_B4_)
+        out_B6_ = self.B6(out_B5_)
 
         trunk = torch.cat([out_B1_, out_B2_, out_B3_, out_B4_, out_B5_, out_B6_], dim=1)
         out_B = self.c1(trunk)
